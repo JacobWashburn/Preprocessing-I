@@ -149,6 +149,23 @@ table {
 	box-sizing: border-box;
 }
 
+@pcolor: blue;
+
+.FooterStyle() {
+	background-color: aqua;
+	display: flex;
+	justify-content: center;
+
+}
+
+.SectionHeaderStyle() {
+	width: 50%;
+	margin: 2% auto;
+	text-align: center;
+	border: 3px solid grey;
+	background-color: #808000;
+}
+
 html {
 	height: 100%;
 	font-size: 62.5%;
@@ -156,7 +173,7 @@ html {
 
 body {
 	height: 100%;
-	font-size: 2rem;
+	font-size: 1.7rem;
 	background: #FFFFF0;
 }
 
@@ -164,6 +181,7 @@ body {
 
 .container {
 	margin: 3%;
+	border: 3px solid grey;
 }
 
 // ! header 
@@ -205,12 +223,7 @@ header {
 
 
 	.BioDescription {
-		width: 50%;
-		margin: 2% auto;
-		padding: 0.1% 0%;
-		text-align: center;
-		background-color: #ADD8E6;
-
+		.SectionHeaderStyle()
 	}
 
 	// bio description end
@@ -244,7 +257,7 @@ header {
 			p {
 				display: flex;
 				justify-content: center;
-
+				color: @pcolor
 			}
 
 			// p end
@@ -257,3 +270,62 @@ header {
 }
 
 // bio info boxes end
+
+// ! resume items seciton
+
+.ResumeItems {
+	margin: 3% 0;
+
+	.Hdr {
+		.SectionHeaderStyle()
+	}
+
+	.IntroContent {
+		display: flex;
+		justify-content: center;
+
+		p {
+			width: 60%;
+			text-align: center;
+		}
+	}
+
+	.SkillsContent {
+		display: flex;
+		justify-content: space-evenly;
+
+		p {
+			width: 25%;
+			text-align: center;
+		}
+	}
+
+	.Experience {
+
+		.WorkList {
+			display: flex;
+			justify-content: space-evenly;
+
+			.Item {}
+
+		}
+	}
+
+}
+
+//! footer
+
+footer {
+	.FooterStyle();
+
+	.ContactInfo {
+		display: flex;
+		flex-direction: column;
+	}
+
+	div {
+		display: flex;
+		justify-content: center;
+
+	}
+}
