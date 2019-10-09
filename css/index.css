@@ -9,12 +9,6 @@ span,
 applet,
 object,
 iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 blockquote,
 pre,
@@ -28,6 +22,9 @@ code,
 del,
 dfn,
 em,
+h4,
+h5,
+h6,
 img,
 ins,
 kbd,
@@ -90,6 +87,15 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+h1 {
+  font-size: 4.5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -137,15 +143,42 @@ html {
 body {
   height: 100%;
   font-size: 2rem;
+  background: #FFFFF0;
 }
 .container {
   margin: 3%;
 }
 header {
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  background: #C0C0C0;
+  padding: 1%;
 }
 header nav a {
   text-decoration: none;
   color: black;
-  font-size: [object Object];
+}
+.Bio {
+  width: 100%;
+  background: #F5F5F5;
+  display: flex;
+  justify-content: space-between;
+}
+.Bio .BioDescription {
+  width: 100%;
+}
+.BioInfoBoxes {
+  width: 100%;
+}
+.BioInfoBoxes .BasicInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid red;
 }

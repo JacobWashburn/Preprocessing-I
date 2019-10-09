@@ -11,12 +11,6 @@ span,
 applet,
 object,
 iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 blockquote,
 pre,
@@ -30,6 +24,9 @@ code,
 del,
 dfn,
 em,
+h4,
+h5,
+h6,
 img,
 ins,
 kbd,
@@ -93,6 +90,18 @@ video {
 	vertical-align: baseline;
 }
 
+h1 {
+	font-size: 4.5rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -148,6 +157,7 @@ html {
 body {
 	height: 100%;
 	font-size: 2rem;
+	background: #FFFFF0;
 }
 
 .container {
@@ -156,13 +166,53 @@ body {
 
 header {
 	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+
 
 	nav {
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+		background: #C0C0C0;
+		padding: 1%;
+
 
 		a {
 			text-decoration: none;
 			color: black;
-			font-size: .page-font();
 		}
+
+		// a end
+	}
+
+	// nav end
+}
+
+// header end
+
+.Bio {
+	width: 100%;
+	background: #F5F5F5;
+	display: flex;
+	justify-content: space-between;
+
+	.BioDescription {
+		width: 100%;
+
+	}
+}
+.BioInfoBoxes {
+	width: 100%;
+
+	.BasicInfo {
+		width:50%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		border: 1px solid red;
+
+		img
+
 	}
 }
