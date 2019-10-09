@@ -160,9 +160,13 @@ body {
 	background: #FFFFF0;
 }
 
+// ! header
+
 .container {
 	margin: 3%;
 }
+
+// ! header 
 
 header {
 	width: 100%;
@@ -191,28 +195,52 @@ header {
 
 // header end
 
+// ! bio section
+
 .Bio {
 	width: 100%;
 	background: #F5F5F5;
+
+
+	.BioDescription {
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+		background-color: #ADD8E6;
+
+	}
+
+	// bio description end
+}
+
+// bio end
+
+.BioInfoBoxes {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 
-	.BioDescription {
-		width: 100%;
-
+	.BioContent {
+		width: 45%;
 	}
-}
-.BioInfoBoxes {
-	width: 100%;
 
 	.BasicInfo {
-		width:50%;
+		width: 45%;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
-		border: 1px solid red;
+		justify-content: space-between;
+		align-content: center;
 
-		img
+		.PersonalInfo {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
 
+			p {
+				display: flex;
+				justify-content: center;
+
+			}
+		}
 	}
 }

@@ -167,18 +167,34 @@ header nav a {
 .Bio {
   width: 100%;
   background: #F5F5F5;
-  display: flex;
-  justify-content: space-between;
 }
 .Bio .BioDescription {
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ADD8E6;
 }
 .BioInfoBoxes {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.BioInfoBoxes .BioContent {
+  width: 45%;
 }
 .BioInfoBoxes .BasicInfo {
+  width: 45%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+.BioInfoBoxes .BasicInfo .PersonalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.BioInfoBoxes .BasicInfo .PersonalInfo p {
+  display: flex;
   justify-content: center;
-  border: 1px solid red;
 }
