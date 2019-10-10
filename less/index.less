@@ -135,7 +135,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
+	content: "";
 	content: none;
 }
 
@@ -152,10 +152,9 @@ table {
 @pcolor: blue;
 
 .FooterStyle() {
-	background-color: aqua;
+	background-color: #00FFFF;
 	display: flex;
 	justify-content: center;
-
 }
 
 .SectionHeaderStyle() {
@@ -164,6 +163,8 @@ table {
 	text-align: center;
 	border: 3px solid grey;
 	background-color: #808000;
+	font-size: 2.5rem;
+	padding: .5% 0;
 }
 
 html {
@@ -174,7 +175,7 @@ html {
 body {
 	height: 100%;
 	font-size: 1.7rem;
-	background: #FFFFF0;
+	background: #fffff0;
 }
 
 // ! header
@@ -184,21 +185,19 @@ body {
 	border: 3px solid grey;
 }
 
-// ! header 
+// ! header
 
 header {
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 
-
 	nav {
 		width: 50%;
 		display: flex;
 		justify-content: space-between;
-		background: #C0C0C0;
+		background: #c0c0c0;
 		padding: 1%;
-
 
 		a {
 			text-decoration: none;
@@ -219,11 +218,10 @@ header {
 
 .Bio {
 	width: 100%;
-	background: #F5F5F5;
-
+	background: #f5f5f5;
 
 	.BioDescription {
-		.SectionHeaderStyle()
+		.SectionHeaderStyle();
 	}
 
 	// bio description end
@@ -238,6 +236,10 @@ header {
 
 	.BioContent {
 		width: 45%;
+
+		p {
+			margin: 2%;
+		}
 	}
 
 	// bio content end
@@ -257,7 +259,7 @@ header {
 			p {
 				display: flex;
 				justify-content: center;
-				color: @pcolor
+				color: @pcolor;
 			}
 
 			// p end
@@ -277,7 +279,7 @@ header {
 	margin: 3% 0;
 
 	.Hdr {
-		.SectionHeaderStyle()
+		.SectionHeaderStyle();
 	}
 
 	.IntroContent {
@@ -295,22 +297,34 @@ header {
 		justify-content: space-evenly;
 
 		p {
-			width: 25%;
+			width: 15%;
 			text-align: center;
+			border: 1px solid grey;
 		}
 	}
 
 	.Experience {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid grey;
+
+
 
 		.WorkList {
-			display: flex;
-			justify-content: space-evenly;
+			margin: 0 auto;
+			width: 70%;
+			border: 1px solid grey;
 
-			.Item {}
+
+			.WorkListItems {
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+
+			}
 
 		}
 	}
-
 }
 
 //! footer
@@ -326,6 +340,5 @@ footer {
 	div {
 		display: flex;
 		justify-content: center;
-
 	}
 }
