@@ -151,6 +151,18 @@ table {
 
 @pcolor: blue;
 
+.NavLinkStyle() {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	background: #c0c0c0;
+	padding: 1%;
+
+	a {
+		color: black;
+	}
+}
+
 .FooterStyle() {
 	background-color: #00FFFF;
 	display: flex;
@@ -183,6 +195,10 @@ body {
 .container {
 	margin: 3%;
 	border: 3px solid grey;
+
+	@media (max-width: 500px) {
+		border: 15px solid grey;
+	}
 }
 
 // ! header
@@ -192,21 +208,19 @@ header {
 	display: flex;
 	justify-content: flex-end;
 
-	nav {
-		width: 50%;
-		display: flex;
-		justify-content: space-between;
-		background: #c0c0c0;
-		padding: 1%;
+	.Dropdown {
+		display: none;
+	}
 
-		a {
-			text-decoration: none;
-			color: black;
+	nav {
+		.NavLinkStyle()
+	}
+
+	@media (max-width: 500px) {
+		nav {
+			width: 100%;
 		}
 
-		//a end
-
-		// a end
 	}
 
 	// nav end
@@ -229,18 +243,34 @@ header {
 
 // bio end
 
-.BioInfoBoxes {
+.BioInfo {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
+
 	.BioContent {
 		width: 45%;
 
+		@media (max-width: 500px) {
+			width: 80%;
+			margin: 0 auto;
+		}
+
 		p {
 			margin: 2%;
+			@media (max-width: 500px) {
+				text-align: center;
+			}
 		}
+
+		
 	}
+
+
 
 	// bio content end
 
@@ -250,6 +280,14 @@ header {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-content: center;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+
+			width: 100%;
+
+			
+		}
 
 		.PersonalInfo {
 			display: flex;
@@ -262,7 +300,7 @@ header {
 				color: @pcolor;
 			}
 
-			// p end
+
 		}
 
 		// personal info end
@@ -306,7 +344,6 @@ header {
 	.Experience {
 		display: flex;
 		flex-direction: column;
-		border: 1px solid grey;
 
 
 
@@ -315,11 +352,23 @@ header {
 			width: 70%;
 			border: 1px solid grey;
 
+			
+
 
 			.WorkListItems {
 				width: 100%;
 				display: flex;
 				justify-content: space-evenly;
+
+				@media (max-width: 500px) {
+					flex-direction: column;
+					justify-content: center;
+
+					.Item{
+						display: flex;
+						justify-content: center;
+					}
+				}
 
 			}
 

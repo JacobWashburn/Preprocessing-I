@@ -149,10 +149,18 @@ body {
   margin: 3%;
   border: 3px solid grey;
 }
+@media (max-width: 500px) {
+  .container {
+    border: 15px solid grey;
+  }
+}
 header {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+header .Dropdown {
+  display: none;
 }
 header nav {
   width: 50%;
@@ -162,8 +170,12 @@ header nav {
   padding: 1%;
 }
 header nav a {
-  text-decoration: none;
   color: black;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+  }
 }
 .Bio {
   width: 100%;
@@ -178,30 +190,52 @@ header nav a {
   font-size: 2.5rem;
   padding: 0.5% 0;
 }
-.BioInfoBoxes {
+.BioInfo {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.BioInfoBoxes .BioContent {
+@media (max-width: 500px) {
+  .BioInfo {
+    flex-direction: column;
+  }
+}
+.BioInfo .BioContent {
   width: 45%;
 }
-.BioInfoBoxes .BioContent p {
+@media (max-width: 500px) {
+  .BioInfo .BioContent {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.BioInfo .BioContent p {
   margin: 2%;
 }
-.BioInfoBoxes .BasicInfo {
+@media (max-width: 500px) {
+  .BioInfo .BioContent p {
+    text-align: center;
+  }
+}
+.BioInfo .BasicInfo {
   width: 45%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
 }
-.BioInfoBoxes .BasicInfo .PersonalInfo {
+@media (max-width: 500px) {
+  .BioInfo .BasicInfo {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.BioInfo .BasicInfo .PersonalInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.BioInfoBoxes .BasicInfo .PersonalInfo p {
+.BioInfo .BasicInfo .PersonalInfo p {
   display: flex;
   justify-content: center;
   color: blue;
@@ -238,7 +272,6 @@ header nav a {
 .ResumeItems .Experience {
   display: flex;
   flex-direction: column;
-  border: 1px solid grey;
 }
 .ResumeItems .Experience .WorkList {
   margin: 0 auto;
@@ -249,6 +282,16 @@ header nav a {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .ResumeItems .Experience .WorkList .WorkListItems {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ResumeItems .Experience .WorkList .WorkListItems .Item {
+    display: flex;
+    justify-content: center;
+  }
 }
 footer {
   background-color: #00FFFF;
